@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Site settings
 title: Few Blog
 SEOTitle: 许方伟的博客 | Few Blog
@@ -6,7 +5,7 @@ header-img: img/home-bg.jpg
 email: 410466495@qq.com
 description: "Web前端攻城狮,灵魂画家,歌手,摄影师 |Web & Mobile Lover，Software Engineer| 这里是 @Few许方伟 的个人博客，欢迎投食。"
 keyword: "许方伟, Few许方伟, Few, web前端, 许方伟的博客, Few Blog, 博客, 个人网站, 互联网, JavaScript, 前端, 设计"
-url: "https://Few1213.github.io"
+url: "Few1213.github.io"
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -14,12 +13,11 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     huxpro
-zhihu_username:     huxpro
-github_username:    huxpro
-twitter_username:   huxpro
-#facebook_username:  huxpro
-#linkedin_username:  firstname-lastname-idxxxx
+csdn_username:     Few1213
+github_username:    Few1213
+segmentfault_username:     Few1213
+
+
 
 
 
@@ -60,7 +58,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: hux
+disqus_username: Few
 
 # Netease settings
 netease_comment: false
@@ -73,14 +71,14 @@ netease_comment: false
 
 # Google Analytics
 ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_domain: Few1213.github.io
 
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "For the next quantum leap<br>离开世界之前，一切都是过程"
-sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar:       # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -107,37 +105,34 @@ friends: [
     #     title: "Su",
     #     href: "http://su.gallery/"
     # },{
-        title: "乱序",
-        href: "http://mida.re/"
-    },{
-        title: "前端外刊评论",
-        href: "http://qianduan.guru/"
-    },{
-        title: "天镶的博客",
-        href: "http://lingyu.wang/"
-    },{
-        title: "Luke 的自留地",
-        href: "http://hmqk1995.github.io"
-    },{
-        title: "Ebn's Blog",
-        href: "http://ebnbin.com/"
-    },{
-        title: "SmdCn's Blog",
-        href: "http://blog.smdcn.net"
-    },{
-        title: "David's Game",
-        href: "https://www.ruoyaowu.com/"
-    },{
-        title: "DHong Say",
-        href: "http://dhong.co"
-    },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
-    },{
-        title: "解旻的博客",
-        href: "http://xieminis.me/"
-    }
+    #     title: "乱序",
+    #     href: "http://mida.re/"
+    # },{
+    #     title: "前端外刊评论",
+    #     href: "http://qianduan.guru/"
+    # },{
+    #     title: "天镶的博客",
+    #     href: "http://lingyu.wang/"
+    # },{
+    #     title: "Luke 的自留地",
+    #     href: "http://hmqk1995.github.io"
+    # },{
+    #     title: "Ebn's Blog",
+    #     href: "http://ebnbin.com/"
+    # },{
+    #     title: "SmdCn's Blog",
+    #     href: "http://blog.smdcn.net"
+    # },{
+    #     title: "David's Game",
+    #     href: "https://www.ruoyaowu.com/"
+    # },{
+    #     title: "DHong Say",
+    #     href: "http://dhong.co"
+    # },{
+    #     title: "尹峰以为",
+    #     href: "http://ingf.github.io/"
+    # },{
+    #     title: "解旻的博客",
+    #     href: "http://xieminis.me/"
+    # }
 ]
-=======
-theme: jekyll-theme-slate
->>>>>>> 1c84d258b8390a05206d6eef0f40443f4f53f1b9
