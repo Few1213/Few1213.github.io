@@ -6,7 +6,8 @@ header-img: img/home-bg.jpg
 email: 410466495@qq.com
 description: "Web前端攻城狮,灵魂画家,歌手,摄影师 |Web & Mobile Lover，Software Engineer| 这里是 @Few许方伟 的个人博客，欢迎投食。"
 keyword: "许方伟, Few许方伟, Few, web前端, 许方伟的博客, Few Blog, 博客, 个人网站, 互联网, JavaScript, 前端, 设计"
-url: "https://huangxuan.me"              # your host, for absolute URL
+url: "https://xufangwei.me
+"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
