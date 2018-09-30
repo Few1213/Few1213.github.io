@@ -1,0 +1,107 @@
+---
+layout: post
+title: "javascript原型成员详解"
+subtitle: "javascript 原型 对象"
+author: "Few"
+header-img: "img/home-bg-art.jpg"
+header-mask: 0.4
+tags:
+  - github
+  - blog
+  - javascript
+  - object
+---
+
+				
+
+```
+							javascript对象原型成员详解
+
+ECMAScript 中的对象就是一组数据和功能的集合，对象可以通过 new 操作符后跟要创建的对象名称来创建。
+	var obj =  new Object( );   //在不传参数的情况下省略号可以不写但不推荐
+由 Object 类型为基础创建出的 obj 实例对象，可以使用 Object类型上所具有的任何属性和方法。
+Object 的每个创建出来的实例都有以下的属性和方法，这些属性和方法存在于它的原型对象中（Object.prototype）
+1. Constructor:  构造函数，保存着用于创建当前对象的函数，此时的构造函数为 Object（）
+
+2. hasOwnProperty(propertyName)：有自己的属性，用于检查给定的属性是否在当前的对象的实例中存在    （而不是在实例的原型中，和 in 运算符有差别）。
+
+   语法： 对象.hasOwnProperty("属性")；
+
+   作用： 判断该属性是否是对象自身的，如果是则返回 true，不然就返回 false
+
+   in 运算符：判断属性能否被对象访问到，不管属性是对象自身的，还是在原型链上的，只要能够访问到，就返回 true，如果不能就返回 false。
+
+3.isPrototypeOf(object): 是否是原型归属，用于检查传入的对象是否是传入对象的原型。（和 instanceof的作用一样，区别在于写法）
+
+语法： 对象A.isPrototypeOf(对象B)；
+
+作用： 判断对象A是否在对象B的原型链上
+
+instanceof：
+
+语法： 对象 instanceof 构造函数
+
+作用： 判断构造函数的 prototype 属性是否在对象的原型链上，如果在，就返回 true
+
+
+4. propertyIsEnumerable（propertyName）：属性是否可枚举：用于检查给定的属性是否能够使用 for-in 语句。
+
+语法： 对象.propertyISEnumerable("属性");
+
+作用： 判断属性是否可以遍历（只有属性是对象自身的并且属性可以遍历的时候才返回 true）
+
+手动给对象的实例对象或者原型对象添加的属性默认都是可以遍历的，但是它原型对象上自带的成员默认是不可以遍历的。
+
+那如何给对象添加一个不可遍历的属性呢？
+
+这里可以使用 Object.defineProperty();
+
+语法：Object.defineProperty(obj, prop, desc);
+
+参数说明：
+
+	obj：指定的对象
+
+	prop： 所要添加的属性（字符串）
+
+	desc：属性描述符，是个对象
+
+举例说明一下：
+
+Object.defineProperty(obj, "gender",{
+
+	value: "female",		//value 给这个对象的该属性设置默认值
+
+	enumerable: true, 	//enumerable 设置属性是否可以遍历，true为可遍历
+
+	writable: false		//writable 设置属性是否可以修改，true为可修改
+
+})
+
+
+5.tolocaleStrin： 返回对象的字符串表示，该字符串和执行环境的地区对应
+
+
+6.toString：返回对象的字符串表示 
+
+
+7.valueOf：返回对象的字符串，数字或者布尔值表示，通常与toString（）方法的返回值相同
+
+额外提到的一点是 对象咋进行运算或者比较的时候，js内部会自动调用 valueOf && toString 这两个方法
+
+调用规则：
+
+	1.首先调用 valueOf 方法，尝试将对象转成简单数据类型，如果没有转成简单数据类型，则继续调用 toString 方法，将对象转成字符串
+
+	2.如果对象分别调用 valueOf  的方法和 toString 的方法，都没有转成简单数据类型，就会报错 
+```
+
+
+
+
+
+```
+	注意的是在 ECMAScript 中 Object是所有对象的而基础，因此所有的对象都具有这些基本属性和方法。
+```
+
+	 
