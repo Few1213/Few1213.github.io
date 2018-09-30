@@ -12,15 +12,21 @@ tags:
   - object
 ---
 
-				
 
-```
+
+javascript对象原型成员详解
+
+
+
+
+
 							javascript对象原型成员详解
 
 ECMAScript 中的对象就是一组数据和功能的集合，对象可以通过 new 操作符后跟要创建的对象名称来创建。
 	var obj =  new Object( );   //在不传参数的情况下省略号可以不写但不推荐
 由 Object 类型为基础创建出的 obj 实例对象，可以使用 Object类型上所具有的任何属性和方法。
 Object 的每个创建出来的实例都有以下的属性和方法，这些属性和方法存在于它的原型对象中（Object.prototype）
+
 1. Constructor:  构造函数，保存着用于创建当前对象的函数，此时的构造函数为 Object（）
 
 2. hasOwnProperty(propertyName)：有自己的属性，用于检查给定的属性是否在当前的对象的实例中存在    （而不是在实例的原型中，和 in 运算符有差别）。
@@ -62,21 +68,22 @@ instanceof：
 
 	obj：指定的对象
 
-	prop： 所要添加的属性（字符串）
+	prop： 所要添加的属性（字符串）	
 
 	desc：属性描述符，是个对象
 
+
+
 举例说明一下：
 
-Object.defineProperty(obj, "gender",{
+	
+	Object.defineProperty(obj, "gender",{
+		value: "female",		//value 给这个对象的该属性设置默认值
+		enumerable: true, 	//enumerable 设置属性是否可以遍历，true为可遍历
+		writable: false		//writable 设置属性是否可以修改，true为可修改
+	})
 
-	value: "female",		//value 给这个对象的该属性设置默认值
 
-	enumerable: true, 	//enumerable 设置属性是否可以遍历，true为可遍历
-
-	writable: false		//writable 设置属性是否可以修改，true为可修改
-
-})
 
 
 5.tolocaleStrin： 返回对象的字符串表示，该字符串和执行环境的地区对应
@@ -94,14 +101,9 @@ Object.defineProperty(obj, "gender",{
 	1.首先调用 valueOf 方法，尝试将对象转成简单数据类型，如果没有转成简单数据类型，则继续调用 toString 方法，将对象转成字符串
 
 	2.如果对象分别调用 valueOf  的方法和 toString 的方法，都没有转成简单数据类型，就会报错 
-```
 
-
-
-
-
-```
 	注意的是在 ECMAScript 中 Object是所有对象的而基础，因此所有的对象都具有这些基本属性和方法。
-```
+
+
 
 	 
